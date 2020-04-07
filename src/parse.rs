@@ -2186,8 +2186,8 @@ impl<'a> Parser<'a> {
                             };
 
                             let id = match &label {
-                                Some(ReferenceLabel::Link(l)) => l.clone(),
-                                Some(ReferenceLabel::Footnote(l)) => l.clone(),
+                                Some((ReferenceLabel::Link(l), _)) => l.clone(),
+                                Some((ReferenceLabel::Footnote(l), _)) => l.clone(),
                                 None => "".into(),
                             };
 
